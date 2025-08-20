@@ -1,0 +1,176 @@
+/* 
+--- TYPOGRAPHY SYSTEM
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+:root {
+  --main-color: #3a2c97;
+  --main-bg-color-light: #f5f5f5;
+  --main-bg-color-dark: #111617;
+  --main-text-color-dark: #fff;
+  --main-text-color-light: #000;
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+  background-image: url(/img/VIP_event_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  height: 100vh;
+}
+
+.container {
+  max-width: 40rem;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 5rem 3rem;
+  border-radius: 2px;
+  box-shadow: var(--shadow-lg);
+}
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+header img {
+  width: 80%;
+}
+.invite {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.invite-text {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+.event-date {
+  font-size: 2.5rem;
+}
+.event-location {
+  display: flex;
+  justify-content: center;
+}
+
+.event-location a:link,
+.event-location a:visited {
+  line-height: 1.5;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  gap: 0.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  color: #000;
+  transition: all 1s;
+}
+
+.event-location a:hover,
+.event-location a:active {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  gap: 1rem;
+}
+
+form input:not([type="checkbox"]),
+form select {
+  border: none;
+  border-bottom: #000 1px solid;
+  border-radius: 0;
+  padding: 0.75rem 0px;
+  box-shadow: none;
+  -webkit-appearance: none; /* Remove rounded corners in Safari and Chrome on iOS */
+  -moz-appearance: none; /* Remove rounded corners in Firefox on iOS */
+  appearance: none; /* Remove rounded corners in other browsers */
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.optin {
+  flex-direction: row-reverse;
+  justify-content: right;
+  gap: 1rem;
+}
+
+.btn--form {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background-color: var(--main-bg-color-dark);
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+form h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.social-links {
+  margin-top: 3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.4rem;
+}
+
+.social-link a:link,
+.social-link a:visited {
+  display: flex;
+  align-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  color: #000;
+  transition: all 0.5s;
+}
+
+.social-link a:hover,
+.social-link a:active {
+  color: var(--main-color);
+}
